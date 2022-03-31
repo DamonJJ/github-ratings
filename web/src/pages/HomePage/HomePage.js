@@ -1,5 +1,6 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import './HomePageStyles.scss'
 
 const HomePage = () => {
   const [userRepos, setUserRepos] = useState([])
