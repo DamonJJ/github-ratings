@@ -1,4 +1,4 @@
-import SearchBar from './SearchBarStyles'
+import SearchBar from './SearchBar'
 
 export const generated = () => {
   return <SearchBar />
