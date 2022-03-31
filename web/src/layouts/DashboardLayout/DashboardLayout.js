@@ -1,18 +1,9 @@
-import { Link, routes } from '@redwoodjs/router'
+import NavBar from 'src/components/NavBar/NavBar'
 
 const DashboardLayout = ({ children }) => {
   return (
     <>
-      <header>
-        <h1>Ruggable's Finest Github Search!</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to={routes.home()}>Home</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <NavBar title={"Ruggable's Finest Github Search!"} />
       <main>{children}</main>
     </>
   )
