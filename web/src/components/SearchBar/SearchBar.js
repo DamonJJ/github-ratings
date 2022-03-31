@@ -1,15 +1,19 @@
-import { Form, TextField, Submit } from '@redwoodjs/forms'
+import { Form, TextField, Submit, FieldError } from '@redwoodjs/forms'
 import './SearchBarStyles.scss'
 
 const SearchBar = ({ onSubmit, name, placeholder, validation }) => {
   return (
-    <Form onSubmit={onSubmit} style={{ fontSize: '2rem' }}>
+    <Form className='search-bar' onSubmit={onSubmit}>
+    <div class="search-bar-wrapper">
       <TextField
         name={name}
+        className='input '
         placeholder={placeholder}
-        validation={{ required: validation }}
+        errorClassName="input error"
+        validation={{ required: true }}
       />
-      <Submit>Search That User!</Submit>
+      </div>
+      <FieldError name="name" className="error-message" />
     </Form>
   )
 }
