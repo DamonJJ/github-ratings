@@ -1,5 +1,7 @@
-import { Link, routes } from '@redwoodjs/router'
+import { useState } from 'react'
 import { MetaTags } from '@redwoodjs/web'
+import SearchBar from 'src/components/SearchBar/SearchBar'
+import Cards from '../../components/Cards/Cards'
 import './HomePageStyles.scss'
 
 const HomePage = () => {
@@ -10,7 +12,8 @@ const HomePage = () => {
       .then((response) => response.json())
       .then((json) => {
         console.log(json)
-        const data = json
+        const isValidArray = Array.isArray(json)
+        const data = isValidArray ? json : [json]
 
         const sortedReposByStars = data.sort((a, b) =>
           a.stargazers_count < b.stargazers_count
@@ -25,18 +28,30 @@ const HomePage = () => {
         setUserRepos(sortedReposByStars)
       })
   }
+
+  const hasAvailableRepos =
+    userRepos.length > 0 && userRepos[0].message === undefined
+
+  const repoNotAvailable = userRepos.length === 0
+
   return (
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <h1>HomePage</h1>
-      <p>
-        Find me in <code>./web/src/pages/HomePage/HomePage.js</code>
-      </p>
-      <p>
-        My default route is named <code>home</code>, link to me with `
-        <Link to={routes.home()}>Home</Link>`
-      </p>
+      <SearchBar onSubmit={onSubmit} name={'user'} placeholder={"Github username"} validation={true} />
+
+      {hasAvailableRepos ? (
+        <Cards
+          data={userRepos}
+          errorMessage={"Looks like that's a private repo!"}
+        />
+      ) : repoNotAvailable ? (
+        <div className="black-repos">Hey Search Those Repos!</div>
+      ) : (
+        <div className="black-repos">
+          Sorry Bud That Repo is Private or Does Not Exist!
+        </div>
+      )}
     </>
   )
 }
