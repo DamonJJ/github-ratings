@@ -4,8 +4,8 @@ const Card = ({ data, mostStars, leastStars }) => {
   return (
     <div className="card" key={data.id}>
       <div className="card-container" key={data.id}>
-        {mostStars && <h1>*Highest Stars*</h1>}
-        {leastStars && <h1>*Least Stars*</h1>}
+        {mostStars && <h1 className='most-stars'>*Highest Stars*</h1>}
+        {leastStars && <h1 className='least-stars'>*Least Stars*</h1>}
         {Object.entries(data).map(([key, value]) => {
           return (
             <>

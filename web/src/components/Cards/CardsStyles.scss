@@ -19,6 +19,14 @@
     .card-container {
       padding: 1rem;
 
+      .most-stars {
+        color:#f7de3a;
+      }
+
+      .least-stars {
+        color: #e31c3d;
+      }
+
       .card-label {
         font-size: 1.5rem;
         font-weight: bold;
