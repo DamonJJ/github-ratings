@@ -38,7 +38,7 @@ const HomePage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <SearchBar onSubmit={onSubmit} name={'user'} placeholder={"Github username"} validation={true} />
+      <SearchBar onSubmit={onSubmit} name={'user'} placeholder={"Search Github Username"} validation={true} />
 
       {hasAvailableRepos ? (
         <Cards
