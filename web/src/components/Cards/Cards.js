@@ -1,22 +1,16 @@
+import Card from './Card'
 import './CardsStyles.scss'
 
-const Cards = ({data, errorMessage}) => {
+const Cards = ({ information, errorMessage }) => {
   return (
     <section className="cards">
-      {data.message ? (
-        <div className="black-repos">{errorMessage}</div>
+      {information.message ? (
+        <div>{errorMessage}</div>
       ) : (
-        data.map((repo) => {
-          return (
-            <div className="card" key={repo.id}>
-              <div className="card-container" key={repo.id}>
-                <div>Stars: {repo.stargazers_count}</div>
-                <div>Clone: {repo.clone_url}</div>
-                <div>Forks: {repo.forks}</div>
-                <div>Visibility: {repo.visibility}</div>
-              </div>
-            </div>
-          )
+        information.map((info, index, information) => {
+          const hasMostStars = index === 0
+          const hasLeastStars = index === information.length -1
+          return <Card data={info} mostStars={hasMostStars} leastStars={hasLeastStars} />
         })
       )}
     </section>

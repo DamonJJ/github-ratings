@@ -34,16 +34,29 @@ const HomePage = () => {
 
   const repoNotAvailable = userRepos.length === 0
 
+  const cardsData = userRepos.map((repo) => ({
+    Stars: repo.stargazers_count,
+    Url: repo.clone_url,
+    Forks: repo.forks,
+    Visibility: repo.visibility,
+  }))
+
   return (
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <SearchBar onSubmit={onSubmit} name={'user'} placeholder={"Search Github Username"} validation={true} />
+      <SearchBar
+        onSubmit={onSubmit}
+        name={'user'}
+        placeholder={'Search Github Username'}
+        validation={true}
+      />
 
       {hasAvailableRepos ? (
         <Cards
-          data={userRepos}
+          information={cardsData}
           errorMessage={"Looks like that's a private repo!"}
+          choices={[{ label: 'Stars', field: 'stargazers_count' }]}
         />
       ) : repoNotAvailable ? (
         <div className="black-repos">Hey Search Those Repos!</div>
