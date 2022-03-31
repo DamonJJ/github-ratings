@@ -59,9 +59,9 @@ const HomePage = () => {
           choices={[{ label: 'Stars', field: 'stargazers_count' }]}
         />
       ) : repoNotAvailable ? (
-        <div className="black-repos">Hey Search Those Repos!</div>
+        <div className="user-messages">Hey Search Those Repos!</div>
       ) : (
-        <div className="black-repos">
+        <div className="user-messages">
           Sorry Bud That Repo is Private or Does Not Exist!
         </div>
       )}
