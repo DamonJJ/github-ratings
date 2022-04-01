@@ -1,3 +1,15 @@
+## Thank you for checking out Github Ratings!
+
+I am going to leave the info below in this readme because I am a huge fan of Redwood and glad to encourage anyone to use it!
+
+## The instructions below tell the tale. Just clone it, "yarn install it", and "yarn rw dev" and it'll start up!
+
+Also here it is live thanks to good 'ol Netlify: https://joyful-paprenjak-556043.netlify.app/
+
+
+
+
+
 # Redwood
 ## Getting Started
 - [Tutorial](https://redwoodjs.com/docs/tutorial): getting started and complete overview guide.
