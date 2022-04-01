@@ -13,7 +13,7 @@ yarn rw dev
 Also here it is live thanks to good 'ol Netlify: https://joyful-paprenjak-556043.netlify.app/
 
 
-#I am going to leave the info below in this readme because I am a huge fan of Redwood and glad to encourage anyone to use it!
+### I am going to leave the info below in this readme because I am a huge fan of Redwood and glad to encourage anyone to use it!
 
 
 # Redwood
