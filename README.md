@@ -1,6 +1,6 @@
 # Thank you for checking out Github Ratings!
 
-# The instructions below tell the tale. Just folow these handy dandy steps:
+### The instructions below tell the tale. Just folow these handy dandy steps:
 
 ```terminal
 git clone https://github.com/DamonJJ/github-ratings.git
@@ -8,7 +8,7 @@ yarn install
 yarn rw dev
 ``` 
 
-# Then it'll start up!
+### Then it'll start up!
 
 Also here it is live thanks to good 'ol Netlify: https://joyful-paprenjak-556043.netlify.app/
 
