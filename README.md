@@ -1,4 +1,4 @@
-#Thank you for checking out Github Ratings!
+# Thank you for checking out Github Ratings!
 
 # The instructions below tell the tale. Just folow these handy dandy steps:
 
