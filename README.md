@@ -2,9 +2,11 @@
 
 # The instructions below tell the tale. Just folow these handy dandy steps:
 
-```git clone https://github.com/DamonJJ/github-ratings.git
+```terminal
+git clone https://github.com/DamonJJ/github-ratings.git
 yarn install
-yarn rw dev``` 
+yarn rw dev
+``` 
 
 # Then it'll start up!
 
